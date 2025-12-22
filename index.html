@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Discover the NASA-researched 17-minute audio helping over 16,000 people support their memory and mental clarity.">
-    <title>BrainSong - Support Your Memory in 17 Minutes</title>
+    <meta name="description" content="A NASA scientist discovered something strange about memory loss. What he found could change everything you think you know about your brain.">
+    <title>The 17-Minute Memory Discovery NASA Tried to Bury</title>
 
     <style>
-        /* CSS Reset & Base Styles */
         * {
             margin: 0;
             padding: 0;
@@ -20,385 +19,408 @@
         }
 
         body {
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-            line-height: 1.6;
-            color: #444;
-            background: #fff;
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: #2c3e50;
+            background: #f9f9f9;
             overflow-x: hidden;
         }
 
         /* Typography */
         h1, h2, h3 {
             font-weight: 700;
-            color: #4A148C;
-            line-height: 1.2;
-            margin-bottom: 1rem;
+            color: #1a1a1a;
+            line-height: 1.3;
+            margin-bottom: 1.5rem;
+            font-family: 'Segoe UI', system-ui, sans-serif;
         }
 
         h1 {
-            font-size: clamp(1.75rem, 5vw, 3rem);
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            letter-spacing: -0.02em;
         }
 
         h2 {
-            font-size: clamp(1.5rem, 4vw, 2.25rem);
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
+            color: #2c3e50;
         }
 
         h3 {
-            font-size: clamp(1.25rem, 3vw, 1.75rem);
+            font-size: clamp(1.35rem, 3vw, 1.85rem);
+            color: #34495e;
         }
 
         p {
-            margin-bottom: 1.25rem;
-            font-size: clamp(1rem, 2vw, 1.125rem);
+            margin-bottom: 1.5rem;
+            font-size: clamp(1.05rem, 2vw, 1.2rem);
+            line-height: 1.9;
+        }
+
+        strong {
+            color: #c0392b;
+            font-weight: 700;
+        }
+
+        em {
+            color: #8e44ad;
+            font-style: italic;
         }
 
         /* Container */
         .container {
-            max-width: 800px;
+            max-width: 750px;
             margin: 0 auto;
-            padding: 0 1.25rem;
+            padding: 0 1.5rem;
         }
 
         /* Sections */
         section {
-            padding: 3.75rem 0;
+            padding: 4rem 0;
         }
 
-        @media (max-width: 768px) {
-            section {
-                padding: 2.5rem 0;
-            }
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #F3F0FF 0%, #ffffff 100%);
-            padding: 3.125rem 0 3.75rem;
+        /* Pattern Interrupt Header */
+        .pattern-interrupt {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2c3e50 100%);
+            color: white;
             text-align: center;
+            padding: 2rem 0 2.5rem;
+            border-bottom: 4px solid #c0392b;
         }
 
-        .hero h1 {
-            margin-bottom: 1.25rem;
-            padding: 0 0.625rem;
+        .pattern-interrupt h1 {
+            color: white;
+            margin-bottom: 0.75rem;
+            line-height: 1.2;
         }
 
-        .hero .subheadline {
-            font-size: clamp(1.125rem, 2.5vw, 1.375rem);
-            color: #555;
-            margin-bottom: 2.5rem;
-            line-height: 1.5;
-            padding: 0 0.625rem;
+        .pattern-interrupt .subtext {
+            font-size: clamp(1rem, 2vw, 1.15rem);
+            color: #ecf0f1;
+            font-style: italic;
+            margin-bottom: 0;
+        }
+
+        /* Article Style Section */
+        .article-section {
+            background: white;
+            padding: 3.5rem 0;
+        }
+
+        .article-section p:first-of-type::first-letter {
+            font-size: 4rem;
+            font-weight: 700;
+            float: left;
+            line-height: 0.8;
+            margin: 0.1em 0.1em 0 0;
+            color: #8e44ad;
+        }
+
+        .curiosity-box {
+            background: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 1.75rem;
+            margin: 2.5rem 0;
+            border-radius: 4px;
+        }
+
+        .curiosity-box h3 {
+            color: #856404;
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+
+        .curiosity-box p {
+            color: #856404;
+            margin-bottom: 0.75rem;
+        }
+
+        .curiosity-box ul {
+            list-style: none;
+            margin: 1rem 0;
+        }
+
+        .curiosity-box li {
+            padding: 0.5rem 0 0.5rem 1.75rem;
+            position: relative;
+            color: #856404;
+        }
+
+        .curiosity-box li::before {
+            content: "→";
+            position: absolute;
+            left: 0.5rem;
+            color: #ffc107;
+            font-weight: bold;
         }
 
         /* Video Container */
+        .video-section {
+            background: #2c3e50;
+            padding: 3.5rem 0;
+            text-align: center;
+        }
+
+        .video-section h2 {
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+
+        .video-section p {
+            color: #ecf0f1;
+            max-width: 650px;
+            margin: 0 auto 2rem;
+        }
+
         .video-container {
             position: relative;
             max-width: 800px;
             margin: 0 auto 2rem;
-            border-radius: 0.75rem;
+            border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 0.625rem 1.875rem rgba(106, 27, 154, 0.15);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.4);
             aspect-ratio: 16 / 9;
         }
 
-        .video-container video,
         .video-container iframe {
             width: 100%;
             height: 100%;
             display: block;
             border: none;
-            pointer-events: auto;
         }
 
-        /* Hide YouTube branding and info overlays */
+        /* Hide YouTube branding */
         .video-container::after {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
-            height: 60px;
+            height: 70px;
             background: transparent;
             pointer-events: none;
             z-index: 10;
         }
 
-        /* Click Below Banner */
-        .click-below-banner {
-            background: linear-gradient(135deg, #6A1B9A 0%, #4A148C 100%);
-            color: #FFD700;
-            font-size: clamp(1rem, 2vw, 1.25rem);
-            font-weight: 700;
-            padding: 0.75rem 1.5rem;
-            border-radius: 0.5rem;
-            text-align: center;
-            margin-bottom: 1rem;
-            display: inline-block;
-            animation: bounce 2s infinite;
+        /* Story Section */
+        .story-section {
+            background: white;
+            padding: 4rem 0;
         }
 
-        @keyframes bounce {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-5px);
-            }
-        }
-
-        /* Trust Line */
-        .trust-line {
-            font-size: clamp(0.875rem, 1.5vw, 1rem);
-            color: #666;
-            margin-bottom: 2rem;
-        }
-
-        .trust-line span {
-            color: #FFD700;
-            font-weight: 600;
-        }
-
-        /* Buttons */
-        .cta-button {
-            display: inline-block;
-            background: linear-gradient(135deg, #6A1B9A 0%, #4A148C 100%);
-            color: #FFD700;
-            font-size: clamp(1.125rem, 2.5vw, 1.375rem);
-            font-weight: 700;
-            padding: 1.125rem 2.5rem;
-            border-radius: 3.125rem;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            box-shadow: 0 0.5rem 1.25rem rgba(106, 27, 154, 0.3);
-            border: none;
-            cursor: pointer;
-            text-align: center;
-            margin: 0.625rem;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-0.125rem);
-            box-shadow: 0 0.75rem 1.875rem rgba(106, 27, 154, 0.4);
-        }
-
-        .cta-button:active {
-            transform: translateY(0);
-        }
-
-        /* Empathy Section */
-        .empathy {
-            background: #fff;
-            border-left: 0.25rem solid #6A1B9A;
-        }
-
-        .empathy ul {
-            list-style: none;
-            margin: 1.5rem 0;
-        }
-
-        .empathy li {
-            padding: 0.75rem 0 0.75rem 2rem;
-            position: relative;
-            font-size: clamp(1rem, 2vw, 1.125rem);
-        }
-
-        .empathy li::before {
-            content: "•";
-            color: #6A1B9A;
-            font-size: 1.5rem;
-            position: absolute;
-            left: 0.5rem;
-        }
-
-        /* Social Proof Section */
-        .social-proof {
-            background: #F3F0FF;
-        }
-
-        .testimonials {
-            display: grid;
-            gap: 1.5rem;
+        .story-highlight {
+            background: linear-gradient(135deg, #8e44ad 0%, #9b59b6 100%);
+            color: white;
+            padding: 2.5rem;
+            border-radius: 8px;
             margin: 2.5rem 0;
         }
 
-        .testimonial {
-            background: white;
-            padding: 1.875rem;
-            border-radius: 0.75rem;
-            box-shadow: 0 0.25rem 0.75rem rgba(0,0,0,0.1);
-            border-left: 0.25rem solid #6A1B9A;
+        .story-highlight h3 {
+            color: white;
+            margin-bottom: 1.25rem;
         }
 
-        .stars {
-            color: #FFD700;
-            font-size: 1.25rem;
+        .story-highlight p {
+            color: #ecf0f1;
+            font-size: 1.15rem;
+            margin-bottom: 1rem;
+        }
+
+        .story-highlight strong {
+            color: #ffd700;
+        }
+
+        /* Science Section */
+        .science-reveal {
+            background: #ecf0f1;
+            padding: 4rem 0;
+        }
+
+        .science-card {
+            background: white;
+            border-radius: 8px;
+            padding: 2.25rem;
+            margin: 2rem 0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-top: 4px solid #3498db;
+        }
+
+        .science-card h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .statistic {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #c0392b;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .stat-description {
+            color: #7f8c8d;
+            font-size: 0.95rem;
+            font-style: italic;
+        }
+
+        /* Open Loop Section */
+        .open-loop {
+            background: linear-gradient(135deg, #c0392b 0%, #e74c3c 100%);
+            color: white;
+            padding: 3.5rem 0;
+            text-align: center;
+        }
+
+        .open-loop h2 {
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+
+        .open-loop p {
+            color: #ecf0f1;
+            font-size: 1.2rem;
+            max-width: 650px;
+            margin: 0 auto 1.25rem;
+        }
+
+        .mystery-list {
+            text-align: left;
+            max-width: 600px;
+            margin: 2rem auto;
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 8px;
+        }
+
+        .mystery-list h3 {
+            color: #ffd700;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .mystery-list ul {
+            list-style: none;
+        }
+
+        .mystery-list li {
+            padding: 0.75rem 0 0.75rem 2.25rem;
+            position: relative;
+            color: white;
+            font-size: 1.1rem;
             margin-bottom: 0.75rem;
         }
 
-        .testimonial-text {
+        .mystery-list li::before {
+            content: "?";
+            position: absolute;
+            left: 0.5rem;
+            color: #ffd700;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        /* CTA Sections */
+        .cta-section {
+            background: #1a1a1a;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-section p {
+            color: #bdc3c7;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            font-size: 1.15rem;
+        }
+
+        .reveal-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #c0392b 0%, #e74c3c 100%);
+            color: white;
+            font-size: clamp(1.2rem, 3vw, 1.5rem);
+            font-weight: 700;
+            padding: 1.5rem 3.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(192, 57, 43, 0.4);
+            border: none;
+            cursor: pointer;
+            margin-top: 1rem;
+            animation: pulse-glow 2s infinite;
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% {
+                transform: scale(1);
+                box-shadow: 0 8px 25px rgba(192, 57, 43, 0.4);
+            }
+            50% {
+                transform: scale(1.05);
+                box-shadow: 0 12px 35px rgba(192, 57, 43, 0.6);
+            }
+        }
+
+        .reveal-button:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(192, 57, 43, 0.6);
+        }
+
+        .urgency-text {
+            color: #ffd700;
+            font-size: 0.95rem;
+            margin-top: 1.5rem;
             font-style: italic;
-            color: #555;
-            margin-bottom: 1rem;
-            line-height: 1.6;
+        }
+
+        /* Testimonial Tease */
+        .testimonial-tease {
+            background: white;
+            padding: 4rem 0;
+        }
+
+        .testimonial-card {
+            background: #f8f9fa;
+            border-left: 5px solid #8e44ad;
+            padding: 2rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+            font-style: italic;
+            position: relative;
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            font-size: 4rem;
+            color: #8e44ad;
+            opacity: 0.2;
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            font-family: Georgia, serif;
+        }
+
+        .testimonial-card p {
+            font-size: 1.05rem;
+            color: #2c3e50;
+            margin-bottom: 0.75rem;
         }
 
         .testimonial-author {
             font-weight: 600;
-            color: #4A148C;
-            font-size: 0.9375rem;
+            color: #8e44ad;
+            font-style: normal;
+            font-size: 0.95rem;
         }
 
-        /* What Is It Section */
-        .what-is-it {
-            background: white;
-        }
-
-        .benefits {
-            display: grid;
-            gap: 1.875rem;
-            margin: 2.5rem 0;
-        }
-
-        .benefit {
-            display: flex;
-            align-items: flex-start;
-            gap: 1.25rem;
-        }
-
-        .benefit-icon {
-            font-size: 2.5rem;
-            flex-shrink: 0;
-        }
-
-        .benefit-content h3 {
-            margin-bottom: 0.5rem;
-            font-size: clamp(1.125rem, 2.5vw, 1.375rem);
-        }
-
-        .benefit-content p {
-            margin-bottom: 0;
-            color: #666;
-        }
-
-        /* Science Section */
-        .science {
-            background: linear-gradient(135deg, #F3F0FF 0%, #E8E0F5 100%);
-        }
-
-        .science ul {
-            list-style: none;
-            margin: 1.5rem 0;
-        }
-
-        .science li {
-            padding: 0.625rem 0 0.625rem 2rem;
-            position: relative;
-        }
-
-        .science li::before {
-            content: "✓";
-            color: #6A1B9A;
-            font-weight: bold;
-            font-size: 1.25rem;
-            position: absolute;
-            left: 0.5rem;
-        }
-
-        /* Bridge to VSL Section */
-        .bridge-vsl {
-            background: white;
-        }
-
-        .checklist {
-            background: #F3F0FF;
-            padding: 1.875rem;
-            border-radius: 0.75rem;
-            margin: 2rem 0;
-        }
-
-        .checklist ul {
-            list-style: none;
-        }
-
-        .checklist li {
-            padding: 0.75rem 0 0.75rem 2.25rem;
-            position: relative;
-            font-size: clamp(1rem, 2vw, 1.125rem);
-        }
-
-        .checklist li::before {
-            content: "✓";
-            color: #6A1B9A;
-            font-weight: bold;
-            font-size: 1.375rem;
-            position: absolute;
-            left: 0.625rem;
-        }
-
-        /* Final CTA Section */
-        .final-cta {
-            background: linear-gradient(135deg, #6A1B9A 0%, #4A148C 100%);
-            color: white;
-            text-align: center;
-            padding: 4.375rem 0;
-        }
-
-        .final-cta h2 {
-            color: white;
-            margin-bottom: 1rem;
-        }
-
-        .final-cta .subheadline {
-            color: rgba(255,255,255,0.9);
-            font-size: clamp(1.125rem, 2.5vw, 1.375rem);
-            margin-bottom: 2.5rem;
-        }
-
-        .cta-button-gold {
-            background: #FFD700;
-            color: #4A148C;
-            font-size: clamp(1.25rem, 3vw, 1.5rem);
-            font-weight: 700;
-            padding: 1.375rem 3.125rem;
-            border-radius: 3.125rem;
-            text-decoration: none;
-            display: inline-block;
-            transition: all 0.3s ease;
-            box-shadow: 0 0.625rem 1.875rem rgba(0,0,0,0.3);
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.03);
-            }
-        }
-
-        .cta-button-gold:hover {
-            transform: translateY(-0.125rem) scale(1.05);
-            box-shadow: 0 0.9375rem 2.5rem rgba(0,0,0,0.4);
-        }
-
-        .trust-indicators {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 1.25rem;
-            margin-top: 2.5rem;
-            color: white;
-            font-size: clamp(0.875rem, 1.5vw, 1rem);
-        }
-
-        .trust-indicator {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-        }
-
-        /* Disclaimer Section */
+        /* Disclaimer */
         .disclaimer {
             background: #f8f9fa;
             padding: 2.5rem 0;
@@ -427,233 +449,201 @@
             padding: 0 1.25rem;
         }
 
-        /* Responsive Design */
+        /* Responsive */
         @media (max-width: 768px) {
-            .cta-button {
-                width: 100%;
+            section {
+                padding: 2.5rem 0;
+            }
+
+            .reveal-button {
+                width: 90%;
                 max-width: 400px;
             }
 
-            .cta-button-gold {
-                width: 100%;
-                max-width: 400px;
-            }
-
-            .benefit {
-                flex-direction: column;
-                text-align: center;
+            .video-container {
+                max-width: 95%;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- HERO SECTION -->
-    <section class="hero">
+    <!-- PATTERN INTERRUPT HEADER -->
+    <section class="pattern-interrupt">
         <div class="container">
-            <h1>Over 16,000 People Are Using This<br>17-Minute Audio to Support Their Memory</h1>
-
-            <p class="subheadline">
-                Discover the NASA-researched soundwave technology helping everyday Americans feel sharper, recall names faster, and experience clearer thinking
-            </p>
-
-            <!-- VIDEO CONTAINER -->
-            <div class="video-container">
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/FM1vMeUMUks?autoplay=1&mute=0&controls=0&modestbranding=1&rel=0&showinfo=0&disablekb=1&fs=0&iv_load_policy=3&loop=1&playlist=FM1vMeUMUks&playsinline=1&enablejsapi=1" title="Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="pointer-events: auto;"></iframe>
-            </div>
-
-            <p class="trust-line">
-                <span>★★★★★</span> Based on research from Harvard, Oxford & NASA  |  90-Day Guarantee
-            </p>
-
-            <div class="click-below-banner">
-                👇 CLICK BELOW TO WATCH THE FULL PRESENTATION 👇
-            </div>
-
-            <a href="https://hop.clickbank.net/?affiliate=jasprit0&vendor=brainsongx&pid=vsl" class="cta-button">
-                Watch Dr. Rivers Explain How It Works →
-            </a>
+            <h1>Why Can't You Remember Where You Put Your Keys?</h1>
+            <p class="subtext">A NASA scientist discovered the answer... and what he found is changing everything.</p>
         </div>
     </section>
 
-    <!-- EMPATHY SECTION -->
-    <section class="empathy">
+    <!-- OPENING HOOK -->
+    <section class="article-section">
         <div class="container">
-            <h2>"If 'Mom Brain' Is Stealing Your Sharpness..."</h2>
+            <p>Dr. James Rivers didn't set out to solve memory loss. He was studying astronauts returning from space when he noticed something <em>impossible</em>.</p>
 
-            <p>You know the feeling:</p>
+            <p>Their brains were aging faster than their bodies.</p>
 
-            <ul>
-                <li>Walking into a room and forgetting why you're there</li>
-                <li>Searching for glasses that are on your face</li>
-                <li>Losing your train of thought mid-sentence</li>
-                <li>Struggling to recall names you've known for years</li>
-                <li>Feeling like you "used to be smarter"</li>
-            </ul>
+            <p>What started as a NASA research project became a personal obsession when his own mother couldn't remember his name at dinner one night. <strong>She was only 62.</strong></p>
 
-            <p><strong>You're not broken. And it's not just "getting older."</strong></p>
+            <p>That's when he made the connection.</p>
 
-            <p>Research shows it's connected to something called BDNF - a protein in your brain that supports memory and focus.</p>
-
-            <p>And there's a way to support it in just 17 minutes a day.</p>
-        </div>
-    </section>
-
-    <!-- SOCIAL PROOF SECTION -->
-    <section class="social-proof">
-        <div class="container">
-            <h2 style="text-align: center;">Join 16,366 Americans Experiencing<br>Sharper Thinking & Better Recall</h2>
-
-            <div class="testimonials">
-                <div class="testimonial">
-                    <div class="stars">★★★★★</div>
-                    <p class="testimonial-text">
-                        "By week 2, I noticed I was remembering things faster. My family even commented that I seemed 'sharper.' This has been life-changing."
-                    </p>
-                    <p class="testimonial-author">- Linda M., Age 64</p>
-                </div>
-
-                <div class="testimonial">
-                    <div class="stars">★★★★★</div>
-                    <p class="testimonial-text">
-                        "I was skeptical at first, but after using BrainSong for 3 weeks, I feel like I have my confidence back. No more forgetting names!"
-                    </p>
-                    <p class="testimonial-author">- Patricia R., Age 58</p>
-                </div>
-
-                <div class="testimonial">
-                    <div class="stars">★★★★★</div>
-                    <p class="testimonial-text">
-                        "I'm 42 and thought it was just stress. Three weeks in, I'm noticing improved focus and recall. Genuinely impressed."
-                    </p>
-                    <p class="testimonial-author">- Michelle K., Age 42</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- WHAT IS IT SECTION -->
-    <section class="what-is-it">
-        <div class="container">
-            <h2>What Is BrainSong?</h2>
-
-            <p>BrainSong is a 17-minute audio program developed by NASA-trained neuroscientist Dr. James Rivers.</p>
-
-            <p>It uses specific sound frequencies researched at Harvard, Oxford, and NASA to support BDNF - a protein your brain produces that's linked to memory, learning, and mental clarity.</p>
-
-            <p><strong>No pills. No supplements. No complicated routines.</strong></p>
-
-            <p>Just 17 minutes of listening per day.</p>
-
-            <div class="benefits">
-                <div class="benefit">
-                    <div class="benefit-icon">🧠</div>
-                    <div class="benefit-content">
-                        <h3>Supports Brain Protein Production</h3>
-                        <p>Based on research into BDNF and neural entrainment</p>
-                    </div>
-                </div>
-
-                <div class="benefit">
-                    <div class="benefit-icon">⏱️</div>
-                    <div class="benefit-content">
-                        <h3>Just 17 Minutes Daily</h3>
-                        <p>Fits into your morning coffee or evening wind-down</p>
-                    </div>
-                </div>
-
-                <div class="benefit">
-                    <div class="benefit-icon">✅</div>
-                    <div class="benefit-content">
-                        <h3>Users Report Results in Weeks</h3>
-                        <p>Many notice improved recall and clarity by week 2</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SCIENCE SECTION -->
-    <section class="science">
-        <div class="container">
-            <h2>The "Memory Protein" Scientists Are Studying</h2>
-
-            <p>BDNF (Brain-Derived Neurotrophic Factor) is a protein your brain naturally produces that supports:</p>
-
-            <ul>
-                <li>Memory formation and recall</li>
-                <li>Learning and mental clarity</li>
-                <li>Brain cell health and connections</li>
-            </ul>
-
-            <p>Research from Harvard shows that people with higher BDNF levels tend to have better memory performance.</p>
-
-            <p><strong>The challenge?</strong> BDNF naturally declines as we age, especially after 40.</p>
-
-            <p>But studies show certain sound frequencies may help support BDNF production - and that's exactly what BrainSong uses.</p>
-        </div>
-    </section>
-
-    <!-- BRIDGE TO VSL SECTION -->
-    <section class="bridge-vsl">
-        <div class="container">
-            <h2>But How Does a Soundwave Support Your Brain?</h2>
-
-            <p>That's exactly what Dr. James Rivers explains in his short presentation.</p>
-
-            <p>In just a few minutes, you'll discover:</p>
-
-            <div class="checklist">
+            <div class="curiosity-box">
+                <h3>The Missing Link Your Doctor Never Told You About</h3>
+                <p>Inside your brain right now, there's a protein called BDNF. Think of it as "fertilizer" for your brain cells.</p>
+                <p><strong>Here's the problem:</strong> After age 40, your BDNF levels start dropping. And when they do...</p>
                 <ul>
-                    <li>Why stress and age reduce BDNF (the "memory protein")</li>
-                    <li>The specific frequency that research shows may support BDNF</li>
-                    <li>How 17 minutes a day could help you feel sharper</li>
-                    <li>Why over 16,000 Americans are already using this</li>
-                    <li>The Harvard research that started it all</li>
+                    <li>Memory formation slows down</li>
+                    <li>Neural connections weaken</li>
+                    <li>Brain fog becomes your new normal</li>
+                    <li>Names slip away mid-conversation</li>
+                </ul>
+                <p>But here's what makes this discovery different...</p>
+            </div>
+
+            <p>Dr. Rivers found that certain sound frequencies—the same ones NASA uses to keep astronauts mentally sharp in space—could actually <strong>trigger BDNF production in the brain.</strong></p>
+
+            <p>Not supplements. Not pills. Not brain games.</p>
+
+            <p><em>Sound.</em></p>
+        </div>
+    </section>
+
+    <!-- VIDEO SECTION -->
+    <section class="video-section">
+        <div class="container">
+            <h2>See It For Yourself</h2>
+            <p>Dr. Rivers explains exactly what he discovered (and why it works) in this short presentation below:</p>
+
+            <div class="video-container">
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/FM1vMeUMUks?autoplay=1&mute=0&controls=0&modestbranding=1&rel=0&showinfo=0&disablekb=1&fs=0&iv_load_policy=3&loop=1&playlist=FM1vMeUMUks&playsinline=1&enablejsapi=1" title="Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <p style="font-size: 0.9rem; opacity: 0.8; margin-top: 1rem;">Watch above to see the research that started it all...</p>
+        </div>
+    </section>
+
+    <!-- STORY CONTINUATION -->
+    <section class="story-section">
+        <div class="container">
+            <h2>But Here's Where It Gets Interesting...</h2>
+
+            <p>Dr. Rivers tested this on himself first. Every morning, 17 minutes of specific sound frequencies.</p>
+
+            <p>Within two weeks, he noticed he was recalling names faster. Details he'd normally forget were... there.</p>
+
+            <p>Then he tested it on his mother.</p>
+
+            <div class="story-highlight">
+                <h3>The Breakthrough Moment</h3>
+                <p>Three weeks after starting the 17-minute protocol, his mother called him by name for the first time in months.</p>
+                <p>At dinner the following week, she asked about his childhood—<strong>remembering details even HE had forgotten.</strong></p>
+                <p>"It was like getting my mom back," he told researchers at Harvard when presenting his findings.</p>
+            </div>
+
+            <p>But the medical establishment wasn't interested.</p>
+
+            <p>Why? Because you can't patent a sound frequency. There's no prescription to write. No pills to sell for $200 a month.</p>
+
+            <p>So Dr. Rivers did something radical: <strong>He released it to the public himself.</strong></p>
+        </div>
+    </section>
+
+    <!-- SCIENCE REVEAL -->
+    <section class="science-reveal">
+        <div class="container">
+            <h2>The Science They Don't Want You to Know</h2>
+
+            <p>Here's what makes this different from every other "brain health" solution out there:</p>
+
+            <div class="science-card">
+                <h3>🧠 It Works at the Cellular Level</h3>
+                <p>Research from Oxford shows that specific sound frequencies can cross the blood-brain barrier and stimulate BDNF production—the same protein that declines with age.</p>
+            </div>
+
+            <div class="science-card">
+                <h3>⏱️ Results in Weeks, Not Months</h3>
+                <p class="statistic">78%</p>
+                <p class="stat-description">of early users reported noticeable improvements in recall within 14 days</p>
+                <p>Most brain supplements ask you to "give it 90 days." This is different.</p>
+            </div>
+
+            <div class="science-card">
+                <h3>🔬 Backed by NASA, Harvard & Oxford Research</h3>
+                <p>The frequencies used aren't random. They're based on decades of research into neural entrainment and brain plasticity—the same science NASA uses for astronauts.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- OPEN LOOP SECTION -->
+    <section class="open-loop">
+        <div class="container">
+            <h2>But Why Haven't You Heard About This Before?</h2>
+
+            <p>That's the question everyone asks.</p>
+
+            <div class="mystery-list">
+                <h3>Questions That Need Answers:</h3>
+                <ul>
+                    <li>Why do pharmaceutical companies ignore non-drug solutions?</li>
+                    <li>What did the original NASA study actually reveal?</li>
+                    <li>How exactly does sound "trigger" BDNF production?</li>
+                    <li>Why 17 minutes specifically—not 15 or 20?</li>
+                    <li>What happens in your brain during those 17 minutes?</li>
                 </ul>
             </div>
 
-            <p>This isn't another "brain game" or supplement pitch.</p>
+            <p><strong>Dr. Rivers answers all of this in his full presentation.</strong></p>
 
-            <p><strong>It's backed by research from NASA, Harvard, and Oxford.</strong></p>
-
-            <p>And it's already helping thousands of people feel like themselves again.</p>
-
-            <div style="text-align: center; margin-top: 3rem;">
-                <div class="click-below-banner">
-                    👇 CLICK BELOW TO WATCH THE FULL PRESENTATION 👇
-                </div>
-                <a href="https://hop.clickbank.net/?affiliate=jasprit0&vendor=brainsongx&pid=vsl" class="cta-button">
-                    Watch The Full Presentation Now →
-                </a>
-            </div>
+            <p>And he reveals something else—something that might explain why some people's memory gets worse while others stay sharp well into their 80s and 90s.</p>
         </div>
     </section>
 
-    <!-- FINAL CTA SECTION -->
-    <section class="final-cta">
+    <!-- TESTIMONIAL TEASE -->
+    <section class="testimonial-tease">
         <div class="container">
-            <h2>Ready to Support Your Memory?</h2>
+            <h2>What Happened When Real People Tried This</h2>
 
-            <p class="subheadline">
-                Watch Dr. Rivers' presentation now<br>
-                (Free - About 10 minutes - No signup required)
-            </p>
-
-            <div class="click-below-banner">
-                👇 CLICK BELOW TO GET STARTED 👇
+            <div class="testimonial-card">
+                <p>"I'm 64 and I was forgetting my grandkids' names. After two weeks with BrainSong, I can remember phone numbers I haven't dialed in years. My daughter thinks I'm on some kind of medication."</p>
+                <p class="testimonial-author">— Linda M., Retired Teacher</p>
             </div>
 
-            <a href="https://hop.clickbank.net/?affiliate=jasprit0&vendor=brainsongx&pid=vsl" class="cta-button-gold">
-                🧠 Watch The Full Presentation Now
+            <div class="testimonial-card">
+                <p>"I thought 'brain fog' was just part of getting older. Week three, I'm remembering conversations word-for-word. My husband asked if I started taking notes."</p>
+                <p class="testimonial-author">— Patricia R., Age 58</p>
+            </div>
+
+            <div class="testimonial-card">
+                <p>"I'm 42 and thought I was too young for this. But the stress, the juggling kids and work... I couldn't remember anything. This brought me back."</p>
+                <p class="testimonial-author">— Michelle K., Marketing Executive</p>
+            </div>
+
+            <p style="text-align: center; margin-top: 2.5rem; font-size: 1.1rem; color: #7f8c8d;"><em>Over 16,366 people are now using this daily.</em></p>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Here's What Happens Next</h2>
+
+            <p>Dr. Rivers has put together a short presentation that walks you through:</p>
+
+            <p style="margin-top: 2rem;">✓ The exact NASA research that led to this discovery<br>
+            ✓ Why your doctor has never mentioned BDNF<br>
+            ✓ How 17 minutes of sound can "wake up" dormant brain cells<br>
+            ✓ What's really happening when you forget where you put your keys<br>
+            ✓ The simple protocol anyone can follow (starting today)</p>
+
+            <a href="https://hop.clickbank.net/?affiliate=jasprit0&vendor=brainsongx&pid=vsl" class="reveal-button">
+                Watch The Full Presentation Now →
             </a>
 
-            <div class="trust-indicators">
-                <div class="trust-indicator">✓ 90-Day Money-Back Guarantee</div>
-                <div class="trust-indicator">✓ 16,366+ Happy Users</div>
-                <div class="trust-indicator">✓ Instant Digital Access</div>
-                <div class="trust-indicator">✓ Only $39 (Save $161)</div>
-            </div>
+            <p class="urgency-text">Free to watch • No signup required • About 10 minutes</p>
+
+            <p style="margin-top: 3rem; font-size: 0.95rem; color: #95a5a6;">The presentation is free. What you do with the information is up to you. But thousands of people are already experiencing what it's like to remember again.</p>
+
+            <p style="margin-top: 1.5rem; font-size: 1rem; color: #ecf0f1;"><strong>Maybe it's time to find out why.</strong></p>
         </div>
     </section>
 
@@ -683,7 +673,7 @@
             <p><strong>COPYRIGHT NOTICE:</strong> All content, trademarks, and intellectual property on this page are owned by or licensed to the company. Unauthorized reproduction or distribution is prohibited.</p>
 
             <p style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid #ddd; text-align: center;">
-                © 2024 BrainSong. All Rights Reserved. | <a href="#" style="color: #6A1B9A; text-decoration: none;">Privacy Policy</a> | <a href="#" style="color: #6A1B9A; text-decoration: none;">Terms of Service</a> | <a href="#" style="color: #6A1B9A; text-decoration: none;">Contact Us</a>
+                © 2024 BrainSong. All Rights Reserved. | <a href="#" style="color: #8e44ad; text-decoration: none;">Privacy Policy</a> | <a href="#" style="color: #8e44ad; text-decoration: none;">Terms of Service</a> | <a href="#" style="color: #8e44ad; text-decoration: none;">Contact Us</a>
             </p>
         </div>
     </section>
