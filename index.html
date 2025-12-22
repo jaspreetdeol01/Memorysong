@@ -72,22 +72,66 @@
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #F3F0FF 0%, #ffffff 100%);
+            background: linear-gradient(180deg, #0d3d92 0%, #3C30A7 100%);
+            background-position: center top;
+            background-repeat: no-repeat;
+            background-size: cover;
             padding: 3.125rem 0 3.75rem;
             text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 50% 20%, rgba(255,255,255,0.1) 0%, transparent 50%);
+            pointer-events: none;
         }
 
         .hero h1 {
             margin-bottom: 1.25rem;
             padding: 0 0.625rem;
+            color: white;
+            position: relative;
+            z-index: 2;
+        }
+
+        .brain-image {
+            max-width: 300px;
+            margin: 0 auto 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .brain-image img {
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(0 0 30px rgba(255,255,255,0.3));
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
         }
 
         .hero .subheadline {
             font-size: clamp(1.125rem, 2.5vw, 1.375rem);
-            color: #555;
+            color: rgba(255,255,255,0.95);
             margin-bottom: 2.5rem;
             line-height: 1.5;
             padding: 0 0.625rem;
+            position: relative;
+            z-index: 2;
         }
 
         /* Video Container */
@@ -109,8 +153,10 @@
         /* Trust Line */
         .trust-line {
             font-size: clamp(0.875rem, 1.5vw, 1rem);
-            color: #666;
+            color: rgba(255,255,255,0.9);
             margin-bottom: 2rem;
+            position: relative;
+            z-index: 2;
         }
 
         .trust-line span {
@@ -358,6 +404,35 @@
             gap: 0.5rem;
         }
 
+        /* Disclaimer Section */
+        .disclaimer {
+            background: #f8f9fa;
+            padding: 2.5rem 0;
+            border-top: 1px solid #ddd;
+            font-size: 0.75rem;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .disclaimer h3 {
+            font-size: 0.875rem;
+            color: #333;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .disclaimer p {
+            margin-bottom: 0.75rem;
+            font-size: 0.75rem;
+        }
+
+        .disclaimer .disclaimer-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 1.25rem;
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .cta-button {
@@ -374,6 +449,10 @@
                 flex-direction: column;
                 text-align: center;
             }
+
+            .brain-image {
+                max-width: 200px;
+            }
         }
     </style>
 </head>
@@ -382,6 +461,11 @@
     <!-- HERO SECTION -->
     <section class="hero">
         <div class="container">
+            <!-- BRAIN IMAGE -->
+            <div class="brain-image">
+                <img src="https://via.placeholder.com/300x300/6A1B9A/FFFFFF?text=🧠" alt="Brain illustration representing memory enhancement">
+            </div>
+
             <h1>Over 16,000 People Are Using This<br>17-Minute Audio to Support Their Memory</h1>
 
             <p class="subheadline">
@@ -578,6 +662,37 @@
                 <div class="trust-indicator">✓ Instant Digital Access</div>
                 <div class="trust-indicator">✓ Only $39 (Save $161)</div>
             </div>
+        </div>
+    </section>
+
+    <!-- DISCLAIMER SECTION -->
+    <section class="disclaimer">
+        <div class="disclaimer-content">
+            <h3>Important Disclaimers & Disclosures</h3>
+
+            <p><strong>ADVERTISING DISCLOSURE:</strong> This is an advertisement and not an actual news article, blog, or consumer protection update. This page is sponsored content that is created by or on behalf of the company or companies mentioned herein. The information provided on this page is for informational and entertainment purposes only.</p>
+
+            <p><strong>PRODUCT INFORMATION:</strong> The product and information presented on this page are provided "as is" without any representations or warranties, express or implied. The statements made on this page have not been evaluated by the Food and Drug Administration (FDA). This product is not intended to diagnose, treat, cure, or prevent any disease.</p>
+
+            <p><strong>RESULTS DISCLAIMER:</strong> Individual results may vary. The testimonials and examples used are exceptional results and are not intended to guarantee, promise, represent, or imply that all individuals will achieve the same or similar results. Results depend on many factors including but not limited to individual capacity, work ethic, business acumen, dedication, and other factors. There is no guarantee that you will achieve any results from using this product or the information provided.</p>
+
+            <p><strong>HEALTH & MEDICAL DISCLAIMER:</strong> The information provided is not intended as medical advice. Always consult with a qualified healthcare professional before making any changes to your health regimen, especially if you have or suspect you may have a health problem. Never disregard professional medical advice or delay in seeking it because of something you have read on this page.</p>
+
+            <p><strong>EARNINGS & INCOME DISCLAIMER:</strong> Any claims of actual earnings or income examples are not typical. The average person who uses this product may see little to no results. Any statements regarding income or earnings are aspirational statements only of your earning potential.</p>
+
+            <p><strong>AFFILIATE DISCLOSURE:</strong> This page may contain affiliate links and we may earn a commission if you make a purchase through these links at no additional cost to you. We only recommend products and services that we believe will add value to our audience.</p>
+
+            <p><strong>TIKTOK COMPLIANCE:</strong> This content is an advertisement and complies with TikTok's Community Guidelines and Advertising Policies. We do not make misleading health claims, guarantee specific results, or promote unrealistic outcomes. All product claims are based on available research and user testimonials. Users are encouraged to conduct their own research and consult with healthcare professionals.</p>
+
+            <p><strong>TESTIMONIAL DISCLOSURE:</strong> Testimonials appearing on this page are actual testimonials provided by real users. However, they are individual experiences, reflecting real-life experiences of those who have used our products in some way. They are individual results and may not be typical. We do not claim that they are typical results that consumers will generally achieve.</p>
+
+            <p><strong>RESEARCH DISCLAIMER:</strong> References to research from institutions such as NASA, Harvard, and Oxford are based on publicly available scientific studies related to brain health, BDNF, and sound frequencies. These institutions have not directly endorsed or evaluated this specific product.</p>
+
+            <p><strong>COPYRIGHT NOTICE:</strong> All content, trademarks, and intellectual property on this page are owned by or licensed to the company. Unauthorized reproduction or distribution is prohibited.</p>
+
+            <p style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid #ddd; text-align: center;">
+                © 2024 BrainSong. All Rights Reserved. | <a href="#" style="color: #6A1B9A; text-decoration: none;">Privacy Policy</a> | <a href="#" style="color: #6A1B9A; text-decoration: none;">Terms of Service</a> | <a href="#" style="color: #6A1B9A; text-decoration: none;">Contact Us</a>
+            </p>
         </div>
     </section>
 
