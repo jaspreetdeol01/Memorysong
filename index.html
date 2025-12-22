@@ -72,71 +72,33 @@
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #1a0a2e 0%, #0f0520 100%);
-            background-image:
-                url('images/brainsong-background.jpg'),
-                linear-gradient(135deg, #1a0a2e 0%, #0f0520 100%);
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-size: cover;
+            background: linear-gradient(135deg, #F3F0FF 0%, #ffffff 100%);
             padding: 3.125rem 0 3.75rem;
             text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at 50% 50%, rgba(138, 43, 226, 0.2) 0%, transparent 70%);
-            pointer-events: none;
-        }
-
-        .hero::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.5);
-            pointer-events: none;
-        }
-
-        .hero .container {
-            position: relative;
-            z-index: 3;
         }
 
         .hero h1 {
             margin-bottom: 1.25rem;
             padding: 0 0.625rem;
-            color: white;
-            text-shadow: 0 0 20px rgba(138, 43, 226, 0.5);
         }
 
         .hero .subheadline {
             font-size: clamp(1.125rem, 2.5vw, 1.375rem);
-            color: rgba(255, 255, 255, 0.95);
+            color: #555;
             margin-bottom: 2.5rem;
             line-height: 1.5;
             padding: 0 0.625rem;
-            text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
         }
 
         /* Video Container */
         .video-container {
             position: relative;
-            max-width: 600px;
+            max-width: 800px;
             margin: 0 auto 2rem;
             border-radius: 0.75rem;
             overflow: hidden;
             box-shadow: 0 0.625rem 1.875rem rgba(106, 27, 154, 0.15);
-            aspect-ratio: 9 / 16;
+            aspect-ratio: 16 / 9;
         }
 
         .video-container video,
@@ -147,10 +109,33 @@
             border: none;
         }
 
+        /* Click Below Banner */
+        .click-below-banner {
+            background: linear-gradient(135deg, #6A1B9A 0%, #4A148C 100%);
+            color: #FFD700;
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            font-weight: 700;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            display: inline-block;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-5px);
+            }
+        }
+
         /* Trust Line */
         .trust-line {
             font-size: clamp(0.875rem, 1.5vw, 1rem);
-            color: rgba(255, 255, 255, 0.9);
+            color: #666;
             margin-bottom: 2rem;
         }
 
@@ -460,12 +445,16 @@
 
             <!-- VIDEO CONTAINER -->
             <div class="video-container">
-                <iframe width="100%" height="100%" style="aspect-ratio: 9/16; border-radius: 0.75rem;" src="https://www.youtube.com/embed/FM1vMeUMUks?si=Ei1RSEqI0F5O6_Im" title="BrainSong Memory Support Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/FM1vMeUMUks?autoplay=1&mute=1&controls=1&modestbranding=1&rel=0&showinfo=0" title="BrainSong Memory Support Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
 
             <p class="trust-line">
                 <span>★★★★★</span> Based on research from Harvard, Oxford & NASA  |  90-Day Guarantee
             </p>
+
+            <div class="click-below-banner">
+                👇 CLICK BELOW TO WATCH THE FULL PRESENTATION 👇
+            </div>
 
             <a href="https://hop.clickbank.net/?affiliate=jasprit0&vendor=brainsongx&pid=vsl" class="cta-button">
                 Watch Dr. Rivers Explain How It Works →
@@ -617,6 +606,9 @@
             <p>And it's already helping thousands of people feel like themselves again.</p>
 
             <div style="text-align: center; margin-top: 3rem;">
+                <div class="click-below-banner">
+                    👇 CLICK BELOW TO WATCH THE FULL PRESENTATION 👇
+                </div>
                 <a href="https://hop.clickbank.net/?affiliate=jasprit0&vendor=brainsongx&pid=vsl" class="cta-button">
                     Watch The Full Presentation Now →
                 </a>
@@ -633,6 +625,10 @@
                 Watch Dr. Rivers' presentation now<br>
                 (Free - About 10 minutes - No signup required)
             </p>
+
+            <div class="click-below-banner">
+                👇 CLICK BELOW TO GET STARTED 👇
+            </div>
 
             <a href="https://hop.clickbank.net/?affiliate=jasprit0&vendor=brainsongx&pid=vsl" class="cta-button-gold">
                 🧠 Watch The Full Presentation Now
