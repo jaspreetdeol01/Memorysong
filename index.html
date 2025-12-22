@@ -107,6 +107,20 @@
             height: 100%;
             display: block;
             border: none;
+            pointer-events: auto;
+        }
+
+        /* Hide YouTube branding and info overlays */
+        .video-container::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            background: transparent;
+            pointer-events: none;
+            z-index: 10;
         }
 
         /* Click Below Banner */
@@ -445,7 +459,7 @@
 
             <!-- VIDEO CONTAINER -->
             <div class="video-container">
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/FM1vMeUMUks?autoplay=1&controls=0&modestbranding=1&rel=0&showinfo=0&disablekb=1&fs=0&iv_load_policy=3&loop=1&playlist=FM1vMeUMUks" title="BrainSong Memory Support Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/FM1vMeUMUks?autoplay=1&mute=0&controls=0&modestbranding=1&rel=0&showinfo=0&disablekb=1&fs=0&iv_load_policy=3&loop=1&playlist=FM1vMeUMUks&playsinline=1&enablejsapi=1" title="Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="pointer-events: auto;"></iframe>
             </div>
 
             <p class="trust-line">
