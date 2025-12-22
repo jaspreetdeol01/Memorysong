@@ -72,66 +72,22 @@
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(180deg, #0d3d92 0%, #3C30A7 100%);
-            background-position: center top;
-            background-repeat: no-repeat;
-            background-size: cover;
+            background: linear-gradient(135deg, #F3F0FF 0%, #ffffff 100%);
             padding: 3.125rem 0 3.75rem;
             text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at 50% 20%, rgba(255,255,255,0.1) 0%, transparent 50%);
-            pointer-events: none;
         }
 
         .hero h1 {
             margin-bottom: 1.25rem;
             padding: 0 0.625rem;
-            color: white;
-            position: relative;
-            z-index: 2;
-        }
-
-        .brain-image {
-            max-width: 300px;
-            margin: 0 auto 2rem;
-            position: relative;
-            z-index: 2;
-        }
-
-        .brain-image img {
-            width: 100%;
-            height: auto;
-            filter: drop-shadow(0 0 30px rgba(255,255,255,0.3));
-            animation: float 3s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0px);
-            }
-            50% {
-                transform: translateY(-10px);
-            }
         }
 
         .hero .subheadline {
             font-size: clamp(1.125rem, 2.5vw, 1.375rem);
-            color: rgba(255,255,255,0.95);
+            color: #555;
             margin-bottom: 2.5rem;
             line-height: 1.5;
             padding: 0 0.625rem;
-            position: relative;
-            z-index: 2;
         }
 
         /* Video Container */
@@ -153,10 +109,8 @@
         /* Trust Line */
         .trust-line {
             font-size: clamp(0.875rem, 1.5vw, 1rem);
-            color: rgba(255,255,255,0.9);
+            color: #666;
             margin-bottom: 2rem;
-            position: relative;
-            z-index: 2;
         }
 
         .trust-line span {
@@ -449,10 +403,6 @@
                 flex-direction: column;
                 text-align: center;
             }
-
-            .brain-image {
-                max-width: 200px;
-            }
         }
     </style>
 </head>
@@ -461,11 +411,6 @@
     <!-- HERO SECTION -->
     <section class="hero">
         <div class="container">
-            <!-- BRAIN IMAGE -->
-            <div class="brain-image">
-                <img src="https://via.placeholder.com/300x300/6A1B9A/FFFFFF?text=🧠" alt="Brain illustration representing memory enhancement">
-            </div>
-
             <h1>Over 16,000 People Are Using This<br>17-Minute Audio to Support Their Memory</h1>
 
             <p class="subheadline">
