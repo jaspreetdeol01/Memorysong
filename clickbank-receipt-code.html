@@ -1,0 +1,109 @@
+<!-- ClickBank Receipt Page Tracking Code -->
+<!-- Paste this in: ClickBank → Account Settings → My Site → Advanced Tools → Receipt Page Settings -->
+
+<script>
+// ========================================
+// DUAL CONVERSION TRACKING
+// Fires to both Bemob (analytics) and TikTok (optimization)
+// ========================================
+
+// 1. BEMOB CONVERSION TRACKING (Image Pixel Method)
+// Sends conversion data to Bemob for your analytics dashboard
+(function() {
+    var bemobImg = document.createElement('img');
+    bemobImg.src = "https://track.bemob.com/p.php?aff_unique_id=[TID]&goal=1&payout=[ORDERAMT]&txn_id=[CTID]";
+    bemobImg.style.display = 'none';
+    bemobImg.width = 1;
+    bemobImg.height = 1;
+    document.body.appendChild(bemobImg);
+    console.log('Bemob conversion pixel fired');
+})();
+
+// 2. TIKTOK EVENTS API CONVERSION TRACKING
+// Sends conversion data to TikTok for ad optimization
+(function() {
+    // Extract ttclid from TID parameter (passed from Bemob)
+    var ttclid = '[TID]' || '';
+    var orderAmount = '[ORDERAMT]' || '0';
+    var transactionId = '[CTID]' || '';
+
+    // TikTok Events API endpoint
+    var tiktokApiUrl = 'https://business-api.tiktok.com/open_api/v1.3/event/track/';
+
+    // Event payload
+    var eventData = {
+        pixel_code: 'D57F73RC77U5DJL53S3G',
+        event: 'CompletePayment',
+        event_id: transactionId,
+        timestamp: Math.floor(Date.now() / 1000),
+        context: {
+            ad: {
+                callback: ttclid
+            },
+            page: {
+                url: window.location.href
+            },
+            user_agent: navigator.userAgent
+        },
+        properties: {
+            contents: [{
+                content_id: 'brainsong',
+                content_type: 'product',
+                content_name: 'BrainSong Memory Support',
+                quantity: 1
+            }],
+            content_type: 'product',
+            value: parseFloat(orderAmount),
+            currency: 'USD'
+        }
+    };
+
+    // Fire conversion to TikTok Events API
+    fetch(tiktokApiUrl, {
+        method: 'POST',
+        headers: {
+            'Access-Token': 'de3c97370ccbbf7fc3d2a1a50851a2ef6d4eb6be',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(eventData)
+    })
+    .then(function(response) {
+        if (response.ok) {
+            console.log('TikTok conversion fired successfully:', response.status);
+            return response.json();
+        } else {
+            console.error('TikTok conversion failed:', response.status);
+            throw new Error('TikTok API error: ' + response.status);
+        }
+    })
+    .then(function(data) {
+        console.log('TikTok API response:', data);
+    })
+    .catch(function(error) {
+        console.error('TikTok conversion error:', error);
+        // Fallback: Try image pixel method if fetch fails
+        var fallbackImg = document.createElement('img');
+        fallbackImg.src = 'https://analytics.tiktok.com/i18n/pixel/track.gif?sdkid=D57F73RC77U5DJL53S3G&event=CompletePayment&callback=' + encodeURIComponent(ttclid) + '&value=' + orderAmount;
+        fallbackImg.style.display = 'none';
+        fallbackImg.width = 1;
+        fallbackImg.height = 1;
+        document.body.appendChild(fallbackImg);
+        console.log('TikTok fallback pixel fired');
+    });
+})();
+
+// ========================================
+// WHAT THIS CODE DOES:
+// ========================================
+// 1. When ClickBank receipt page loads after purchase
+// 2. Fires conversion to Bemob (your analytics)
+// 3. Fires conversion to TikTok Events API (ad optimization)
+// 4. TikTok matches ttclid to original ad click
+// 5. TikTok optimizes your campaigns automatically
+//
+// Variables used:
+// [TID] = ttclid from Bemob (passed through checkout)
+// [ORDERAMT] = Sale amount (e.g., 47.00)
+// [CTID] = ClickBank Transaction ID (unique order ID)
+// ========================================
+</script>
